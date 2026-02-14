@@ -1,0 +1,8 @@
+/* 
+EC_IT143_6.3_fwt_s1_se.sql
+Author: Sakul Engama
+Purpose: Fun with Triggers – Step 1
+*/
+
+-- QUESTION:
+-- How can I automatically track when a customer record is updated?
