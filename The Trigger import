@@ -1,0 +1,15 @@
+/* 
+EC_IT143_6.3_fwt_s4_se.sql
+Author: Sakul Engama
+Purpose: Fun with Triggers – Step 4
+*/
+
+CREATE TRIGGER trg_UpdateLastModified
+ON dbo.t_w3_schools_customers
+AFTER UPDATE
+AS
+BEGIN
+    UPDATE dbo.t_w3_schools_customers
+    SET LastModifiedDate = GETDATE()
+    WHERE CustomerID IN (SELECT CustomerID FROM inserted);
+END;
